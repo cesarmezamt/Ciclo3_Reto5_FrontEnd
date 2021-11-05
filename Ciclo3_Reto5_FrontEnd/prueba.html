@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <title>Cuadrimotos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./images/cuadrimoto.ico" type="image/x-icon">
+    <script type="text/javascript" src="./scripts/functiones.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+<button type="submit"onclick="traerInformacionMensaje()">Consultar</button>
+
+<!-- tabla -->
+<div id="resultado4">tabla</div>
+<!-- tabla -->
+<table> 
+    <thead>
+        <tr>
+            <th>
+                <p class=bg-info text-white>idMensajes</p>
+            </th>
+            <th>
+                <p class=bg-info text-white>Mensajes</p>
+            </th>
+            <th>
+                <p class=bg-info text-white>Cliente</p>
+            </th>
+            <th>
+                <p class=bg-info text-white>Cuadrimoto</p>
+            </th>
+            <th>
+                <p class=bg-info text-white>Borrar</p>
+            </th>
+            <th>
+                <p class=bg-info text-white>Modificar</p>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Me gusta.</td>
+            <td>Agustin Parra</td>
+            <td>QT600 cc</td>
+            <td> 
+                <button onclick='borrarElementoMensaje(1)'> <img src='images/cuadrimoto.ico' width='20' height='20'> </button>
+            </td>
+            <td> 
+                <button onclick='modificarElementoMensaje(1,"Me gusta.","1","1")'> <img src='images/cuadrimoto.ico' width='20' height='20'></button>
+            </td>
+        </tr>
+    </tbody>
+</table> 
+
+
+</body>
+</html>

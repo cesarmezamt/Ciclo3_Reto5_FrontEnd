@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <title>Cuadrimotos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./images/cuadrimoto.ico" type="image/x-icon">
+    <script type="text/javascript" src="./scripts/functiones.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <script src="./js/bootstrap.bundle.js"></script>
+    <link href="./css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <script type="text/javascript"> 
+        window.onload = traerInformacionMensaje();
+    </script>
+<!-- encabezado -->
+<div class="container shadow-lg">
+        <div class="row tipo1 p-5">
+            <div class="col-lg-2 shadow-lg tipo2">
+                <img src="images/cuadrimoto.png" id="imagen1" width="160" height="160">
+            </div>
+            <div class="col-lg-8 p-5 bg-transparent text-white">
+                <p class="display-5 text-center">Administración de Mensajes</p>
+            </div>
+        </div>
+</div>
+<!-- encabezado -->
+
+<!-- tabla -->
+<div class="container shadow-lg">
+    <div>
+        <div id="resultado4">Tabla</div>
+    </div>
+</div>
+<!-- tabla -->
+
+<div class="container shadow-lg">
+    <button class="btn btn-primary" type="submit"onclick="traerInformacionMensaje(">Consultar</button>
+</div>
+
+<div class="container shadow-lg">
+<form class="row g-3 needs-validation" novalidate>
+
+        <div class="col-md-2 mb-2">
+            <label for="idMensajes">Nº Mensaje</label>
+            <input type="number" class="form-control" id="idMensajes" disabled="disabled">
+            <div class="valid-tooltip">Campo Válido</div>
+            <div class="invalid-tooltip">Campo Vacío</div>
+        </div>
+        <div class="col-md-2 mb-2">  
+            <label for="texMensaje">Mensaje</label>
+            <input type="text" class="form-control" id="texMensaje" required>
+            <div class="valid-tooltip">Campo Válido</div>
+            <div class="invalid-tooltip">Campo Vacío</div>
+        </div>
+        <div class="col-md-2  mb-2">  
+            <label for="relacion-cliente">Cliente</label>
+            <div>
+                <select class="form-select"id="relacion-cliente" required></select>
+            </div>
+        </div>
+        <div class="col-md-2 mb-2">  
+            <label for="relacion-cuadrimoto">Cliente</label>
+            <div>
+                <select class="form-select"id="relacion-cuadrimoto" required></select>
+            </div>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary" name="guardar">Guardar</button>
+            <button type="submit" class="btn btn-primary" name="editar" >Actualizar</button>
+            <a class="btn btn-primary" role="button" onclick="limpiarElementoMensaje()">Limpiar</a>
+            <a class="btn btn-primary" href="index.html"  role="button">Regresar</a>
+        </div>
+</form>
+</div>
+<br>
+    <!--pie de pag.-->
+<div class="container shadow-lg">
+    <div class="row tipo1">
+        <label class="tipo3 centrar">Desarrollado por:
+            <a href="mailto:cesar.meza.mt@correo.usa.edu.co" class="tipo2">César AlbertoMeza González</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            &copy; 2021 - Todos los derechos reservados.
+        </label>
+    </div>
+</div>
+<!--pie de pag.-->
+<br>
+
+<script>
+    
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+        else{
+            if(event.submitter.name=="editar"){
+                editarInformacionMensaje();
+            }
+            if(event.submitter.name=="guardar"){
+                guardarInformacionMensaje();
+            }
+        }
+        form.classList.add('was-validated')
+        }, false)
+    })
+})()
+</script>
+
+</body>
+</html>

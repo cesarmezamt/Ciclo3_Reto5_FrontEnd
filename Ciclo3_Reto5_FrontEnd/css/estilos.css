@@ -1,0 +1,32 @@
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: rgb(170, 238, 250);
+}
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+    background-color: rgb(2, 74, 102);
+}
+.table-striped>thead>tr>th {
+    background-color: rgb(0, 204, 255);
+}
+.table-bordered>thead>tr>th {
+    background-color: rgb(25, 51, 58);
+}
+.table-bordered>tbody>tr>th {
+    background-color: rgb(18, 184, 250);
+}
+.tipo1 {
+    background-color:rgb(0, 153, 255);
+} 
+
+.tipo2 {
+    color:rgb(158, 230, 248);
+} 
+
+.tipo3 {
+    color:rgb(20, 18, 104);
+} 
+.centrar {
+    text-align: center
+    }
